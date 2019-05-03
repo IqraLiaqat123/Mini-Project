@@ -1,2 +1,2 @@
 # Mini-Project
-The project Uses the SQLITE for the database.
+The project uses the SQLITE for the database.
