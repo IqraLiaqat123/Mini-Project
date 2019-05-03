@@ -67,7 +67,7 @@ namespace FinalProjectA
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch 
                     {
                         //Response.Write(ex.Message);
                         //MessageBox.Show("wroooooooong");
@@ -95,7 +95,7 @@ namespace FinalProjectA
                 Document document = new Document();
                 PdfWriter.GetInstance(document, new FileStream("E:/final1.pdf", FileMode.Create));
                 document.Open();
-                //Paragraph p = new Paragraph("Test");
+                Paragraph p = new Paragraph("Test");
                 PdfPTable table = new PdfPTable(3);
                 table.TotalWidth = 216f;
                 table.LockedWidth = true;
@@ -130,7 +130,7 @@ namespace FinalProjectA
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch 
                     {
                         //Response.Write(ex.Message);
                         //MessageBox.Show("wroooooooong");
