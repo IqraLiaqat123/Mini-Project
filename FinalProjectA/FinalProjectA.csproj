@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{895E41F8-BA66-415D-BB88-383B6115B220}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinalProjectA</RootNamespace>
+    <AssemblyName>FinalProjectA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itext.licensekey, Version=3.0.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.licensekey.3.0.1\lib\net40\itext.licensekey.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.pdfa.5.5.13\lib\itextsharp.pdfa.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xfaworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xfaworker.5.5.13\lib\net40\itextsharp.xfaworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xtra.5.5.13\lib\itextsharp.xtra.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jint, Version=0.9.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xfaworker.5.5.13\lib\net40\Jint.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.110.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvaluation.Designer.cs">
+      <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGroup.Designer.cs">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addprojectadvisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addprojectadvisor.Designer.cs">
+      <DependentUpon>addprojectadvisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addgroupevaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addgroupevaluation.Designer.cs">
+      <DependentUpon>addgroupevaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addgroupstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addgroupstudent.Designer.cs">
+      <DependentUpon>addgroupstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProject.Designer.cs">
+      <DependentUpon>AddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAdviser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAdviser.Designer.cs">
+      <DependentUpon>DeleteAdviser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEvaluation.Designer.cs">
+      <DependentUpon>DeleteEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletegroupevaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletegroupevaluation.Designer.cs">
+      <DependentUpon>deletegroupevaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletegroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletegroupProject.Designer.cs">
+      <DependentUpon>DeletegroupProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletegroupstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletegroupstudent.Designer.cs">
+      <DependentUpon>deletegroupstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProject.Designer.cs">
+      <DependentUpon>DeleteProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteprojectadvisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteprojectadvisor.Designer.cs">
+      <DependentUpon>deleteprojectadvisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudent.Designer.cs">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deletegroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletegroup.Designer.cs">
+      <DependentUpon>deletegroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAdviser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayAdviser.Designer.cs">
+      <DependentUpon>DisplayAdviser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayEvaluation.Designer.cs">
+      <DependentUpon>DisplayEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayevaluationproject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayevaluationproject.Designer.cs">
+      <DependentUpon>displayevaluationproject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displaygroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displaygroup.Designer.cs">
+      <DependentUpon>displaygroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displaygroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displaygroupProject.Designer.cs">
+      <DependentUpon>displaygroupProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displaygroupstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displaygroupstudent.Designer.cs">
+      <DependentUpon>displaygroupstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayProject.Designer.cs">
+      <DependentUpon>DisplayProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayprojectadvisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayprojectadvisor.Designer.cs">
+      <DependentUpon>displayprojectadvisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayStudent.Designer.cs">
+      <DependentUpon>DisplayStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addgroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addgroupProject.Designer.cs">
+      <DependentUpon>addgroupProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="index.Designer.cs">
+      <DependentUpon>index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="maindeletestudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="maindeletestudent.Designer.cs">
+      <DependentUpon>maindeletestudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="maindisplaystudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="maindisplaystudent.Designer.cs">
+      <DependentUpon>maindisplaystudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainstudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainstudent.Designer.cs">
+      <DependentUpon>mainstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainupdatestudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainupdatestudent.Designer.cs">
+      <DependentUpon>mainupdatestudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pdf.Designer.cs">
+      <DependentUpon>pdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updategroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updategroup.Designer.cs">
+      <DependentUpon>updategroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAdviser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAdviser.Designer.cs">
+      <DependentUpon>UpdateAdviser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEvaluation.Designer.cs">
+      <DependentUpon>UpdateEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updategroupProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updategroupProject.Designer.cs">
+      <DependentUpon>updategroupProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProject.Designer.cs">
+      <DependentUpon>UpdateProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.Designer.cs">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEvaluation.resx">
+      <DependentUpon>AddEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGroup.resx">
+      <DependentUpon>AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addprojectadvisor.resx">
+      <DependentUpon>addprojectadvisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addgroupevaluation.resx">
+      <DependentUpon>addgroupevaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addgroupstudent.resx">
+      <DependentUpon>addgroupstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProject.resx">
+      <DependentUpon>AddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAdviser.resx">
+      <DependentUpon>DeleteAdviser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEvaluation.resx">
+      <DependentUpon>DeleteEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletegroupevaluation.resx">
+      <DependentUpon>deletegroupevaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletegroupProject.resx">
+      <DependentUpon>DeletegroupProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletegroupstudent.resx">
+      <DependentUpon>deletegroupstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProject.resx">
+      <DependentUpon>DeleteProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteprojectadvisor.resx">
+      <DependentUpon>deleteprojectadvisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudent.resx">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletegroup.resx">
+      <DependentUpon>deletegroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayAdviser.resx">
+      <DependentUpon>DisplayAdviser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayEvaluation.resx">
+      <DependentUpon>DisplayEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayevaluationproject.resx">
+      <DependentUpon>displayevaluationproject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaygroup.resx">
+      <DependentUpon>displaygroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaygroupProject.resx">
+      <DependentUpon>displaygroupProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaygroupstudent.resx">
+      <DependentUpon>displaygroupstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayProject.resx">
+      <DependentUpon>DisplayProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayprojectadvisor.resx">
+      <DependentUpon>displayprojectadvisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayStudent.resx">
+      <DependentUpon>DisplayStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addgroupProject.resx">
+      <DependentUpon>addgroupProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index.resx">
+      <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="maindeletestudent.resx">
+      <DependentUpon>maindeletestudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="maindisplaystudent.resx">
+      <DependentUpon>maindisplaystudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainstudent.resx">
+      <DependentUpon>mainstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainupdatestudent.resx">
+      <DependentUpon>mainupdatestudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pdf.resx">
+      <DependentUpon>pdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="updategroup.resx">
+      <DependentUpon>updategroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAdviser.resx">
+      <DependentUpon>UpdateAdviser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEvaluation.resx">
+      <DependentUpon>UpdateEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updategroupProject.resx">
+      <DependentUpon>updategroupProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProject.resx">
+      <DependentUpon>UpdateProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
